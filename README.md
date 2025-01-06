@@ -18,13 +18,9 @@ Main code is:
 #define TRIG_PIN 42 // connect pins
 #define ECHO_PIN 40
 SR04 sr04 = SR04(ECHO_PIN,TRIG_PIN);
-long a; //
+long a; // the variable
 
-#define KP_ROWS 4
-#define KP_COLS 4
-
-byte colPins[KP_COLS] = {33, 35, 37, 39};
-byte rowPins[KP_ROWS] = {25, 27, 29, 31};
+// here registring my keyboard
 
 int lampara = 4;
 int signala = 52;
@@ -36,7 +32,7 @@ char keys[KP_ROWS][KP_COLS] = {
   {'4', '5', '6', '-'},
   {'7', '8', '9', '*'},
   {'*', '0', '#', '/'}
-};
+}; // keys
 
 boolean getus = false;
 
@@ -57,34 +53,25 @@ int doble = false;
 IRrecv irrecv(irPin);
 
 void setup() {
-
-  
-
   
 pinMode(power, OUTPUT);
 pinMode(lampara, OUTPUT);
-pinMode(signala, OUTPUT);
-  Serial.begin(9600);
-  irrecv.enableIRIn();
+pinMode(signala, OUTPUT); // registring outputs
+  Serial.begin(9600); // register port
+  irrecv.enableIRIn(); // registring Iremote control
   
-starter();
+starter(); // the start function run
 
 }
-
-
-
-
 void loop() {
-
-  remote();
-
+  remote(); // function for accept signals from remote control
 if(getus) {
-     passa(); 
+     passa(); // the other module
 }
 
 if(sonarius) {
-   sonar();
+   sonar(); // second function of my big code
 }
-   
+
 }
 ```
