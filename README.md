@@ -81,3 +81,4 @@ I'm very new to this, and this is my first code that works well!
 ## The construction
 
 I put it all together using some of the parts
+![https://photos.fife.usercontent.google.com/pw/AP1GczMUa3yl3s8QhT_wLskP6Eza_ZzjvjogrgvljJZ7bAIfkDiSzM7zPSMZkQ=w1102-h620-s-k-no-gm?authuser=0](constructor)
